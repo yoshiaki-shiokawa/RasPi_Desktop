@@ -1,6 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version "1.4.0"
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
 }
 group = 'com.test'
 version = '1.0-SNAPSHOT'
@@ -17,6 +18,12 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "no.tornado:tornadofx:$tornadofx_version"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
+    compile fileTree(dir: "C:\\Users\\Yoshiaki\\Documents\\javafx-sdk-11.0.2\\lib\\")
+}
+
+javafx {
+    version = "14"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
 compileKotlin {
